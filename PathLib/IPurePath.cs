@@ -94,6 +94,21 @@ namespace PathLib
         bool IsReserved();
 
         /// <summary>
+        /// Return true if the path has relative directory separators such as the two dots (..). 
+        /// If the directory has relative separators, the user can perform <see cref="NormalizeRelativeSeparators"/> in order to normalize
+        /// the path and remove the RelativeSeparators
+        /// </summary>
+        /// <returns></returns>
+     //   bool HasRelativeSeparators();
+
+        /// <summary>
+        /// If the path has any Relative Separators, the path will be normalized 
+        /// to have the relative separators removed and navigation to the proper directory will be performed.
+        /// </summary>
+        /// <returns></returns>
+      //  void NormalizeRelativeSeparators();
+
+        /// <summary>
         /// Join the current path with the provided paths, in turn.
         /// </summary>
         /// <param name="paths"></param>

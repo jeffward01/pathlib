@@ -54,7 +54,9 @@ namespace PathLib
         private struct LUID_AND_ATTRIBUTES
         {
             public LUID Luid;
+#pragma warning disable IDE0049 // Simplify Names
             public UInt32 Attributes;
+#pragma warning restore IDE0049 // Simplify Names
         }
 
         private struct TOKEN_PRIVILEGES

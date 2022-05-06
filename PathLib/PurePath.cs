@@ -304,6 +304,11 @@ namespace PathLib
         private string _cachedPosix;
         private readonly object _toPosixLock = new object();
 
+        public void NormalizeRelativeSeparators()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <inheritdoc/>
         public TPath Join(params string[] paths)
         {
@@ -746,6 +751,12 @@ namespace PathLib
 
         /// <inheritdoc/>
         public abstract bool IsReserved();
+
+        /// <inheritdoc/>
+        public bool HasRelativeSeparators()
+        {
+            throw new NotImplementedException();
+        }
 
         // Matching is case-insensitive on NT machines.
         // http://stackoverflow.com/questions/6907720/need-to-perform-wildcard-etc-search-on-a-string-using-regex/16488364#16488364
